@@ -29,12 +29,13 @@ class PigLatinizer
   def piggify(word)
     #needs to piglatinize indiviual word according to test
       new_word = word.split("")
+      binding.pry
       vowels = ["a", "e", "i", "o", "u"]
       u_and_e = ["u", "e"]
       #rule where if first two letters are consonants, must both go to end
-        if u_and_e.include?(new_word[0].downcase)
+        if u_and_e.include?(new_word[0].downcase) #if first letter is u or e
           new_word
-        elsif vowels.include?(new_word[0].downcase) || vowels.include?(new_word[1].downcase)
+        elsif vowels.include?(new_word[0].downcase) || vowels.include?(new_word[1].downcase) #if first or second letters are consonants
             first = new_word.first
             new_word.shift
             new_word << first
