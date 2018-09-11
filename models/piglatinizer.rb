@@ -1,12 +1,11 @@
 require 'pry'
 
 class PigLatinizer
-  attr_reader :text
 
 
   def piglatinize(sentence)
-    @text = sentence.split(" ") #.downcase #breaks words of sentence into array
-    iterate_words(@text) #individually piglatinizes each word, through piglatinize method and returns full sentence
+    text = sentence.split(" ") #.downcase #breaks words of sentence into array
+    iterate_words(text) #individually piglatinizes each word, through piglatinize method and returns full sentence
   end
 
   def iterate_words(words)
