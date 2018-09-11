@@ -30,7 +30,6 @@ class PigLatinizer
   def piggify(word)
     #needs to piglatinize indiviual word according to test
       new_word = word.split("")
-      binding.pry
       vowels = ["a", "e", "i", "o", "u"]
       u_and_e = ["u", "e"]
       #rule where if first two letters are consonants, must both go to end
