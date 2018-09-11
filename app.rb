@@ -7,6 +7,7 @@ class App < Sinatra::Base
   end
 
   get '/piglatinize' do
+    raise params
     erb :piglatinize
   end
 
