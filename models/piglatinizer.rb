@@ -5,7 +5,7 @@ class PigLatinizer
 
 
   def piglatinize(sentence)
-    @text = sentence.downcase.split(" ") #breaks words of sentence into array
+    @text = sentence.split(" ") #.downcase #breaks words of sentence into array
     iterate_words(@text) #individually piglatinizes each word, through piglatinize method and returns full sentence
   end
 
@@ -18,7 +18,7 @@ class PigLatinizer
     pigger_array = []
     if pig_array.count > 1
       pig_array.each do |pig|
-        pigger_array << pig.downcase
+        pigger_array << pig #.downcase
       end
     else
       pigger_array = pig_array
@@ -33,19 +33,19 @@ class PigLatinizer
       vowels = ["a", "e", "i", "o", "u"]
       u_and_e = ["u", "e"]
       #rule where if first two letters are consonants, must both go to end
-        if u_and_e.include?(new_word[0])
+        if u_and_e.include?(new_word[0].downcase)
           new_word
-        elsif vowels.include?(new_word[0]) || vowels.include?(new_word[1])
+        elsif vowels.include?(new_word[0].downcase) || vowels.include?(new_word[1].downcase)
             first = new_word.first
             new_word.shift
             new_word << first
-        elsif vowels.include?(new_word[0]) || vowels.include?(new_word[1]) || vowels.include?(new_word[2])
+        elsif vowels.include?(new_word[0].downcase) || vowels.include?(new_word[1].downcase) || vowels.include?(new_word[2].downcase)
             first = [new_word[0], new_word[1]]
             new_word.shift
             new_word.shift
             new_word << first
         else #so with words like spray, all three consonants at beg will carry over
-          first = [new_word[0], new_word[1], new_word[2]]
+          first = [new_word[0].downcase, new_word[1].downcase, new_word[2].downcase]
           new_word.shift
           new_word.shift
           new_word.shift
