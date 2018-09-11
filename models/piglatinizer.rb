@@ -22,7 +22,7 @@ class PigLatinizer
     #else
       #pigger_array = pig_array
     #end
-    piggest_array = pig_array.join(" ")
+    piggest_array = pig_array.join(" ") #turning array of words into sentence
     piggest_array
   end
 
