@@ -53,7 +53,7 @@ class PigLatinizer
         end
         if u_and_e.include?(new_word[0].downcase)
           text_arrayed_ay = new_word << ["w", "a", "y"]
-        elsif vowels.include?(first)
+        elsif vowels.include?(first.downcase)
           text_arrayed_ay = new_word << ["w", "a", "y"]
         else
           text_arrayed_ay = new_word << ["a", "y"]
