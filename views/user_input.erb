@@ -2,10 +2,21 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Pig Latinizer!</title>
   </head>
   <body>
-    <h1>Pig Latinizer</h1>
-  
+
+    <form method="post" action="/">
+      <p>Enter your phrase:</p>
+      <textarea name="user_phrase"></textarea>
+      <br>
+      <button type="submit" value="submit">Submit</button>
+    </form>
+
+
+    <h1>Your Pig Latinized Text</h1>
+
+    <h2><%= @analyzed_text %></h2> <!-- already did .piglatinize in app.rb -->
+
   </body>
 </html>
