@@ -60,7 +60,7 @@ class PigLatinizer
         end
       pig_text = text_arrayed_ay.flatten.join("")
       if pig_text == "iway" || pig_text == "enumerationway"
-        pig_text = pig_text.capitalize
+        pig_text = pig_text #.capitalize
       end
       pig_text
 
