@@ -14,15 +14,15 @@ class PigLatinizer
       pword = piggify(word)
       pig_array << pword
     end
-    pigger_array = []
-    if pig_array.count > 1
-      pig_array.each do |pig|
-        pigger_array << pig #.downcase
-      end
-    else
-      pigger_array = pig_array
-    end
-    piggest_array = pigger_array.join(" ")
+    #pigger_array = []
+    #if pig_array.count > 1
+      #pig_array.each do |pig|
+        #pigger_array << pig #.downcase
+      #end
+    #else
+      #pigger_array = pig_array
+    #end
+    piggest_array = pig_array.join(" ")
     piggest_array
   end
 
