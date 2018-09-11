@@ -12,6 +12,7 @@ class PigLatinizer
     pig_array = []
     words.each do |word|
       pword = piggify(word)
+      binding.pry
       pig_array << pword
     end
     #pigger_array = []
